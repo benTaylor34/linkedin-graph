@@ -1,4 +1,5 @@
 Creates a html file that displats an interactive graph for linkedin connections.
+![LinkedIn Network Graph](images/example-graph.png)
 
 # Requirements
 
