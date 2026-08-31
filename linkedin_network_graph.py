@@ -7,7 +7,7 @@ Takes the CSV you export from LinkedIn yourself (Settings & Privacy ->
 Data Privacy -> Get a copy of your data -> "Connections") and builds a
 similarity graph of your network.
 
-IMPORTANT / HONEST LIMITATION
+LIMITATIONS
 ------------------------------
 LinkedIn's personal data export only tells you who is connected to *you*.
 It does NOT tell you which of your connections are connected to each other
@@ -22,10 +22,6 @@ Instead, it builds a *similarity graph*:
   - Node color = inferred industry
   - Node clustering = pulled together if they share a company (via
     edge weighting in the layout)
-
-This is genuinely useful for spotting clusters (e.g. "everyone I know
-from Company X" or "my finance contacts") without needing any data
-LinkedIn doesn't give you.
 
 USAGE
 -----
@@ -508,6 +504,7 @@ def build_constellation_html(graph: nx.Graph, output_path: str, df: pd.DataFrame
                     size=round(14 + math.sqrt(employee_count) * 4, 1),
                     font={"color": "#ffe9b3", "size": 15, "strokeWidth": 3, "strokeColor": "#05070d"},
                     shadow={"enabled": True, "color": gold, "size": 18, "x": 0, "y": 0},
+                    physics=False,
                 )
             else:
                 # No custom icon supplied: fall back to a generated gold
@@ -578,12 +575,12 @@ def build_constellation_html(graph: nx.Graph, output_path: str, df: pd.DataFrame
                 "gravitationalConstant": -60,
                 "centralGravity": 0.008,
                 "springLength": 90,
-                "springConstant": 0.06,
+                "springConstant": 0.02,
                 "damping": 0.4,
                 "avoidOverlap": 0.6,
             },
             "stabilization": {"enabled": True, "iterations": 250, "fit": True},
-            "minVelocity": 0.75,
+            "minVelocity": 0.5,
         },
     }))
 
