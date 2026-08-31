@@ -1,5 +1,7 @@
 An interactive html graph that displays linkedin connections.
 
+# Requirements
+
 Requires the user to submit a FOI request to linkedin to get connection data.
 This can be done by doing:
 * Login to your linkedin account.
