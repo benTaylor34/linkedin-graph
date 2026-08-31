@@ -1,4 +1,4 @@
-An interactive html graph that displays linkedin connections.
+Creates a html file that displats an interactive graph for linkedin connections.
 
 # Requirements
 
