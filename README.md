@@ -1,5 +1,7 @@
-Creates a html file that displats an interactive graph for linkedin connections.
+Creates a html file that displays an interactive graph for linkedin connections.
+
 ![LinkedIn Network Graph](images/example-graph.png)
+
 
 # Requirements
 
@@ -14,3 +16,6 @@ This can be done by doing:
 
 After completeing these steps LinkedIn will prepare your data and send a download link to your primary email address.
 This process usually takes a few minutes, but it can sometimes take up to 24 hours
+
+Install python requirements from the requirements.txt file using: 
+pip install -r requirements.txt
